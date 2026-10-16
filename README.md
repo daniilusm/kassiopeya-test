@@ -1,78 +1,24 @@
-# Vanilla JS and Sass Boilerplate with Vite
+# Ананасовый улун
 
-This is a simple boilerplate project for getting started with a web development project using Vanilla JavaScript and Sass, powered by Vite.
+Верхняя часть карточки товара [Teaboom.ru](https://teaboom.ru/product/ananasovij-ulun).
 
-## Features
+HTML, SCSS и ванильный JavaScript, сборка на Vite.
 
-- Vanilla JavaScript: Write modern JavaScript code without any frameworks or libraries.
-- Sass: Utilize the power of Sass to create maintainable and organized CSS styles. (v. 1)
-- Vite: Enjoy a fast development experience with Vite's blazing-fast build tooling. (v. 8)
+## Запуск
 
-## Getting Started
-
-1. Clone the repository:
+Нужен Node.js 22 (версия указана в `.nvmrc`) и pnpm.
 
 ```sh
-git clone https://github.com/jhordyess/vanilla-sass-boilerplate.git
+nvm use
+pnpm install
+pnpm dev
 ```
 
-2. Navigate to the project folder:
+Страница откроется на [http://localhost:5173](http://localhost:5173).
+
+## Сборка
 
 ```sh
-cd vanilla-sass-boilerplate
+pnpm build
+pnpm preview
 ```
-
-3. Install dependencies:
-
-```sh
-npm install
-```
-
-4. Start the development server:
-
-```sh
-npm run dev
-```
-
-5. Open your browser and visit [http://localhost:5173](http://localhost:5173) to see your project.
-
-## Project Structure
-
-```md
-vanilla-sass-boilerplate/
-├── .gitignore              # Files and directories to ignore in Git.
-├── index.html              # Entry point HTML file.
-├── package.json            # Project configuration and dependencies.
-├── README.md               # Project documentation.
-├── src/
-│   ├── main.js             # Main JavaScript file.
-│   ├── style.scss          # Main Sass file. Write your styles here.
-```
-
-## Commands
-
-### Start the development server
-
-```sh
-npm run dev
-```
-
-### Build the project for production
-
-```sh
-npm run build
-```
-
-### Preview the project before production
-
-```sh
-npm run preview
-```
-
-## Contributing
-
-Contributions are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
-
----
-
-Happy coding!

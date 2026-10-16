@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../../shared/styles/vars" as v;
+@use "../../shared/styles/mixins" as m;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --container-gutter: #{v.$container-gutter};
+
+  @each $name in m.keys-desc(v.$container-gutters) {
+    @include m.to($name) {
+      --container-gutter: #{map.get(v.$container-gutters, $name)};
+    }
+  }
+}
