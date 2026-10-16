@@ -1,15 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sass Project</title>
-    <script type="module" src="/src/main.js" defer></script>
+    <title>Ананасовый улун — Чайный Бум</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <main class="container">
-      <h1>Hello, Sass!</h1>
-      <p>This is a simple example of using Sass with HTML.</p>
+    <main class="product-page">
+      <article class="product-card">
+        <header class="product-card__header">
+          <h1 class="product-card__title">Ананасовый улун</h1>
+          <p class="product-card__category"></p>
+        </header>
+
+        <div class="product-card__body">
+          <div class="product-card__media">
+            <img
+              class="product-card__image"
+              src="/images/ananasovij-ulun.webp"
+              alt="Ананасовый улун"
+              width="970"
+              height="970"
+            />
+          </div>
+
+          <div class="product-card__purchase">
+            <fieldset class="pack-list">
+              <legend class="visually-hidden">Фасовка</legend>
+
+              <label class="pack-list__option">
+                <input
+                  class="pack-list__input"
+                  type="radio"
+                  name="pack"
+                  value="100"
+                  data-art="01306"
+                  data-price="326,40&nbsp;₽"
+                  data-old-price="349,20&nbsp;₽"
+                  checked
+                />
+                <span class="pack-list__mark" aria-hidden="true"></span>
+                <span class="pack-list__weight">100 г</span>
+              </label>
+
+              <label class="pack-list__option">
+                <input
+                  class="pack-list__input"
+                  type="radio"
+                  name="pack"
+                  value="500"
+                  data-art="01307"
+                  data-price="1&nbsp;432&nbsp;₽"
+                  data-old-price="1&nbsp;646&nbsp;₽"
+                />
+                <span class="pack-list__mark" aria-hidden="true"></span>
+                <span class="pack-list__weight">500 г</span>
+              </label>
+
+              <label class="pack-list__option">
+                <input
+                  class="pack-list__input"
+                  type="radio"
+                  name="pack"
+                  value="1000"
+                  data-art="01308"
+                  data-price="2&nbsp;064&nbsp;₽"
+                  data-old-price="2&nbsp;592&nbsp;₽"
+                />
+                <span class="pack-list__mark" aria-hidden="true"></span>
+                <span class="pack-list__weight">1000 г</span>
+              </label>
+
+              <label class="pack-list__option">
+                <input
+                  class="pack-list__input"
+                  type="radio"
+                  name="pack"
+                  value="5000"
+                  data-art="01309"
+                  data-price="6&nbsp;320&nbsp;₽"
+                  data-old-price="8&nbsp;710&nbsp;₽"
+                />
+                <span class="pack-list__mark" aria-hidden="true"></span>
+                <span class="pack-list__weight">5000 г</span>
+              </label>
+            </fieldset>
+
+            <div class="product-card__offer" aria-live="polite">
+              <p class="product-card__art">арт. <span data-art>01306</span></p>
+              <p class="product-card__prices">
+                <s class="product-card__price product-card__price--old" data-old-price>
+                  <span class="visually-hidden">Старая цена </span>
+                  <span data-old-price-value>349,20&nbsp;₽</span>
+                </s>
+                <span class="product-card__price product-card__price--current">
+                  <span class="visually-hidden">Цена </span>
+                  <span data-price>326,40&nbsp;₽</span>
+                </span>
+              </p>
+            </div>
+
+            <button class="button product-card__cart" type="button">В корзину</button>
+
+            <p class="product-card__description">
+              Светлый фуцзяньский улун с ароматом ананаса. Крупный изумрудный лист и
+              прозрачный янтарный настой с яркой фруктовой нотой.
+            </p>
+          </div>
+        </div>
+      </article>
     </main>
   </body>
 </html>

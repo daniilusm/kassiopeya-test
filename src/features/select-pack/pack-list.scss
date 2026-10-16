@@ -1,0 +1,82 @@
+@use "../../shared/styles/vars" as v;
+@use "../../shared/styles/mixins" as *;
+
+.pack-list {
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pack-list__option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+  min-height: rem(48);
+  padding: rem(10) rem(14);
+  border: 1px solid v.$color-line;
+  background-color: v.$color-surface;
+  cursor: pointer;
+
+  & + & {
+    margin-top: -1px;
+  }
+
+  &:hover {
+    background-color: v.$color-cream;
+  }
+
+  &:has(.pack-list__input:checked) {
+    z-index: 1;
+    border-color: v.$color-accent;
+    background-color: v.$color-cream;
+  }
+
+  &:has(.pack-list__input:focus-visible) {
+    outline: 2px solid v.$color-heading;
+    outline-offset: 2px;
+  }
+}
+
+.pack-list__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pack-list__mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: rem(18);
+  height: rem(18);
+  border: 2px solid v.$color-text;
+  border-radius: 50%;
+}
+
+.pack-list__option:has(.pack-list__input:checked) .pack-list__mark::after {
+  content: "";
+  width: rem(8);
+  height: rem(8);
+  border-radius: 50%;
+  background-color: v.$color-heading;
+}
+
+.pack-list__weight {
+  font-size: rem(14);
+  font-weight: 600;
+  color: v.$color-text;
+}
+
+.pack-list__option:has(.pack-list__input:checked) .pack-list__weight {
+  font-weight: 700;
+}

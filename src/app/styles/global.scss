@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "sass:map";
 @use "../../shared/styles/vars" as v;
 @use "../../shared/styles/mixins" as m;
@@ -8,10 +9,39 @@
   box-sizing: border-box;
 }
 
-:root {
-  --container-gutter: #{v.$container-gutter};
+body {
+  margin: 0;
+  font-family: v.$font-family;
+  font-size: m.rem(16);
+  line-height: 1.5;
+  color: v.$color-text;
+  background-color: v.$color-bg;
+  -webkit-font-smoothing: antialiased;
+}
 
-  @each $name in m.keys-desc(v.$container-gutters) {
+h1,
+p,
+fieldset {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  $names: m.keys-desc(v.$container-gutters);
+  --container-gutter: #{map.get(v.$container-gutters, list.nth($names, 1))};
+
+  @for $index from 2 through list.length($names) {
+    $name: list.nth($names, $index);
+
     @include m.to($name) {
       --container-gutter: #{map.get(v.$container-gutters, $name)};
     }

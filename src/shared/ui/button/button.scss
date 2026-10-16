@@ -1,0 +1,35 @@
+@use "../../styles/vars" as v;
+@use "../../styles/mixins" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 rem(28);
+  border: 0;
+  border-radius: rem(4);
+  background-color: v.$color-accent;
+  color: v.$color-heading;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: v.$color-accent-hover;
+    color: v.$color-surface;
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$color-heading;
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

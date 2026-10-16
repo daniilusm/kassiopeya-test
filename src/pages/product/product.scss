@@ -1,0 +1,13 @@
+@use "../../shared/styles/mixins" as *;
+
+.product-page {
+  padding-block: rem(40) rem(64);
+
+  @include to("xl") {
+    padding-block: rem(28) rem(48);
+  }
+
+  @include to("sm") {
+    padding-block: rem(16) rem(32);
+  }
+}
