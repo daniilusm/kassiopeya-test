@@ -1,0 +1,50 @@
+@use "../../shared/styles/vars" as v;
+@use "../../shared/styles/mixins" as *;
+
+.catalog-page {
+  padding-block: rem(40) rem(64);
+
+  @include to("xl") {
+    padding-block: rem(28) rem(48);
+  }
+
+  @include to("sm") {
+    padding-block: rem(16) rem(32);
+  }
+}
+
+.catalog-page__container {
+  @include container;
+}
+
+.catalog-page__title {
+  margin-bottom: rem(28);
+  color: v.$color-heading;
+  font-size: rem(32);
+  font-weight: 700;
+  line-height: 1.2;
+
+  @include to("sm") {
+    margin-bottom: rem(20);
+    font-size: rem(26);
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: rem(24);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include to("xl") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: rem(20);
+  }
+
+  @include to("sm") {
+    grid-template-columns: 1fr;
+    gap: rem(16);
+  }
+}

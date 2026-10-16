@@ -1,0 +1,36 @@
+@use "../../styles/vars" as v;
+@use "../../styles/mixins" as *;
+
+.breadcrumbs {
+  margin-bottom: rem(20);
+  color: v.$color-muted;
+  font-size: rem(13);
+  line-height: 1.4;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "–";
+  margin-inline: rem(8);
+}
+
+.breadcrumbs__link {
+  color: v.$color-text;
+  text-decoration: none;
+
+  &:hover {
+    color: v.$color-heading;
+  }
+}
+
+.breadcrumbs__item[aria-current="page"] {
+  color: v.$color-heading;
+}

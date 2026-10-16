@@ -2,7 +2,7 @@
 @use "../../shared/styles/mixins" as *;
 
 .product-card {
-  @include container;
+  width: 100%;
 }
 
 .product-card__header {

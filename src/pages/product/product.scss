@@ -11,3 +11,7 @@
     padding-block: rem(16) rem(32);
   }
 }
+
+.product-page__container {
+  @include container;
+}

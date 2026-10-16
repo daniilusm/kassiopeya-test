@@ -1,6 +1,9 @@
 @use "global";
 @use "../../shared/styles/helpers";
 @use "../../pages/product/product";
+@use "../../pages/catalog/catalog";
+@use "../../widgets/catalog-card/catalog-card";
+@use "../../shared/ui/breadcrumbs/breadcrumbs";
 @use "../../widgets/product-card/product-card";
 @use "../../features/select-pack/pack-list";
 @use "../../shared/ui/button/button";
